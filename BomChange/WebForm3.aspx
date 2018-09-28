@@ -15,7 +15,7 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="BodyContent" runat="server">
 
-    <div id="container" style="width: 77%;">
+    <div id="container" style="width: 78%;">
         <canvas id="canvas"></canvas>
     </div>
     <button id="randomizeData">Randomize Data</button>
