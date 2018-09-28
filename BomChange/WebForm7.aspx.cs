@@ -67,7 +67,7 @@ namespace BomChange
             gvw.PageIndex = e.NewPageIndex;
         }
         Loaddata("where ISNULL(已处理) or `已处理`=''");
-        //GridView1.DataSource = DBHelper.GetDatasByAdapter("select * from ecn2").Tables[0];
+        //GridView1.DataSource = DBHelper.GetDatasByAdapter("select * from ecn1").Tables[0];
         //GridView1.DataBind();
         //你绑定数据的方法
     }
@@ -167,15 +167,15 @@ namespace BomChange
                     try
                     {
                         var uuid = Guid.NewGuid().ToString();
-                        //string sql = string.Format("insert into ecn2(`增加或减少`,`柜号`,`柜子描述`,`MO`,`物料号`,`数量`,`工段号`,`物料属性`,`库位`,`总数量`,`变更原因`,`位置`,`是否外包`,`MO下达车间与否`,`变更影响`,`物料描述`,`ECN`,`SO`,`申请人`,`申请日期`,`批准人`,`批准日期`,`项目名称`) \n" +
+                        //string sql = string.Format("insert into ecn1(`增加或减少`,`柜号`,`柜子描述`,`MO`,`物料号`,`数量`,`工段号`,`物料属性`,`库位`,`总数量`,`变更原因`,`位置`,`是否外包`,`MO下达车间与否`,`变更影响`,`物料描述`,`ECN`,`SO`,`申请人`,`申请日期`,`批准人`,`批准日期`,`项目名称`) \n" +
                         // " values ('{0}','{1}','{2}','{3}','{4}','{5}','{6}','{7}','{8}','{9}','{10}','{11}','{12}','{13}','{14}','{15}','{16}','{17}','{18}','{19}','{20}','{21}','{22}')", a1, a2, a3,a4,a5,a6,a7,a8,a9,a10,a11,a12,a13,a14,a15,a16,Label2.Text,Label3.Text,Label4.Text,Label5.Text,Label6.Text,Label7.Text,Label8.Text);
-                        //                           string sql = string.Format("insert into ecn2(`增加或减少`,`柜号`,`柜子描述`,`MO`,`物料号`,`数量`,`工段号`,`物料属性`,`库位`,`总数量`,`变更原因`,`位置`,`是否外包`,`MO下达车间与否`,`变更影响`,`物料描述`,`ECN`,`SO`,`申请人`,`申请日期`,`批准人`,`批准日期`,`项目名称`) \n" +
+                        //                           string sql = string.Format("insert into ecn1(`增加或减少`,`柜号`,`柜子描述`,`MO`,`物料号`,`数量`,`工段号`,`物料属性`,`库位`,`总数量`,`变更原因`,`位置`,`是否外包`,`MO下达车间与否`,`变更影响`,`物料描述`,`ECN`,`SO`,`申请人`,`申请日期`,`批准人`,`批准日期`,`项目名称`) \n" +
                         //" values ('{0}','{1}','{2}','{3}','{4}','{5}','{6}','{7}','{8}','{9}','{10}','{11}','{12}','{13}','{14}','{15}','{16}','{17}','{18}','{19}','{20}','{21}','{22}','{23}')", a1, a2, a3, a4, a5, a6, a7, a8, a9, a10, a11, a12, a13, a14, a15, a16, a18, a19, a20, a21, a22, a23, a24);
-                        //string sql = string.Format("insert into ecn2(`增加或减少`,`柜号`,`柜子描述`,`MO`,`物料号`,`数量`,`工段号`,`物料属性`,`库位`,`总数量`,`变更原因`,`位置`,`是否外包`,`MO下达车间`,`变更影响`,`物料描述`,`ECN`,`SO`,`申请人`,`申请日期`,`批准人`,`批准日期`,`项目名称`,`完成日期`) \n" +
+                        //string sql = string.Format("insert into ecn1(`增加或减少`,`柜号`,`柜子描述`,`MO`,`物料号`,`数量`,`工段号`,`物料属性`,`库位`,`总数量`,`变更原因`,`位置`,`是否外包`,`MO下达车间`,`变更影响`,`物料描述`,`ECN`,`SO`,`申请人`,`申请日期`,`批准人`,`批准日期`,`项目名称`,`完成日期`) \n" +
                         //" values ('{0}','{1}','{2}','{3}','{4}','{5}','{6}','{7}','{8}','{9}','{10}','{11}','{12}','{13}','{14}','{15}','{16}','{17}','{18}','{19}','{20}','{21}','{22}','{23}')", a1, a2, a3, a4, a5, a6, a7, a8, a9, a10, a11, a12, a13, a14, a15, a16, a18, a19, a20, a21, a22, a23, a24, null);
-                        string sql = string.Format("INSERT into ecn2(`增加或减少`,`柜号`,`柜子描述`,`MO`,`物料号`,`数量`,`工段号`,`物料属性`,`库位`,`总数量`,`变更原因`,`位置`,`是否外包`,`MO下达车间`,`变更影响`,`物料描述`,`ECN`,`SO`,`申请人`,`申请日期`,`批准人`,`批准日期`,`项目名称`,`完成时间`) \n" +
+                        string sql = string.Format("INSERT into ecn1(`增加或减少`,`柜号`,`柜子描述`,`MO`,`物料号`,`数量`,`工段号`,`物料属性`,`库位`,`总数量`,`变更原因`,`位置`,`是否外包`,`MO下达车间`,`变更影响`,`物料描述`,`ECN`,`SO`,`申请人`,`申请日期`,`批准人`,`批准日期`,`项目名称`,`完成时间`) \n" +
                         " values ('" + a1 + "','" + a2 + "','" + a3 + "','" + a4 + "','" + a5 + "','" + a6 + "','" + a7 + "','" + a8 + "','" + a9 + "','" + a10 + "','" + a11 + "','" + a12 + "','" + a13 + "','" + a14 + "','" + a15 + "','" + a16 + "','" + a18 + "','" + a19 + "','" + a20 + "','" + a21 + "','" + a22 + "','" + a23 + "','" + a24 + "',NULL)");
-                        //string sql = string.Format("INSERT into ecn2(`处理人员`,`完成时间`) VALUES ('张三',NULL)");
+                        //string sql = string.Format("INSERT into ecn1(`处理人员`,`完成时间`) VALUES ('张三',NULL)");
 
                         int count = DBHelper.ExecuteNonQuery(sql);
                         if (count > 0)
@@ -205,7 +205,7 @@ namespace BomChange
 
 
 
-        GridView1.DataSource = DBHelper.GetDatasByAdapter("select * from ecn2").Tables[0];
+        GridView1.DataSource = DBHelper.GetDatasByAdapter("select * from ecn1").Tables[0];
         GridView1.DataBind();
     }
     #endregion
@@ -246,7 +246,7 @@ namespace BomChange
 
     protected void Button2_Click(object sender, EventArgs e)
     {
-        string str = getExcelOneCell(@"c:\BOM change-福晶-20180719-ecn263224X-E-SAP.xlsx", 2, 2);
+        string str = getExcelOneCell(@"c:\BOM change-福晶-20180719-ecn163224X-E-SAP.xlsx", 2, 2);
         Response.Write("<script>alert('" + str + "');</script>");
     }
 
@@ -404,7 +404,7 @@ namespace BomChange
 
         }
 
-        //GridView1.DataSource = DBHelper.GetDatasByAdapter("select * from ecn2 where ISNULL(已处理) or `已处理`='' ").Tables[0];
+        //GridView1.DataSource = DBHelper.GetDatasByAdapter("select * from ecn1 where ISNULL(已处理) or `已处理`='' ").Tables[0];
         //GridViewBind1("");
         #endregion
 
@@ -422,14 +422,14 @@ namespace BomChange
             if (ckb.Checked)
             {
                 string huohao = this.GridView1.Rows[i].Cells[2].Text.ToString();
-                string num = DBHelper.ExcuteSqlreturnInt("update ecn2 SET `已处理`='已处理',`处理人员`='" + UserName + "',`完成时间`=NOW()  where id='" + huohao + "'").ToString();
+                string num = DBHelper.ExcuteSqlreturnInt("update ecn1 SET `已处理`='已处理',`处理人员`='" + UserName + "',`完成时间`=NOW()  where id='" + huohao + "'").ToString();
                 //Response.Write("<script>alert('" + huohao + "');</script>");
                 //Response.Write("<script>alert('" + huohao + "');</script>");
             }
 
         }
 
-        GridView1.DataSource = DBHelper.GetDatasByAdapter("select * from ecn2 where ISNULL(已处理)").Tables[0];
+        GridView1.DataSource = DBHelper.GetDatasByAdapter("select * from ecn1 where ISNULL(已处理)").Tables[0];
         GridView1.DataBind();
 
     }
@@ -472,7 +472,7 @@ namespace BomChange
     {
         string ID = ((TextBox)(GridView1.Rows[e.RowIndex].Cells[2].Controls[0])).Text.ToString().Trim();
         string str1 = ((TextBox)(GridView1.Rows[e.RowIndex].Cells[10].Controls[0])).Text.ToString().Trim();
-        int num = DBHelper.ExcuteSqlreturnInt("UPDATE ecn2 SET `库位`= '" + str1 + "' WHERE id = '" + ID + "'");
+        int num = DBHelper.ExcuteSqlreturnInt("UPDATE ecn1 SET `库位`= '" + str1 + "' WHERE id = '" + ID + "'");
 
         if (num > 0)//使用Usersmr类UpdateByProc方法修改用户信息
         {
@@ -542,32 +542,32 @@ namespace BomChange
     private void Loaddata(string where)
     {
         GridView1.DataSource = DBHelper.GetDatasByAdapter("SELECT\n" +
-        "ecn2.id,\n" +
-        "ecn2.`增加或减少`,\n" +
-        "ecn2.`柜号`,\n" +
-        "ecn2.`柜子描述`,\n" +
-        "ecn2.MO,\n" +
-        "ecn2.`物料号`,\n" +
-        "ecn2.`数量`,\n" +
-        "ecn2.`物料属性`,\n" +
-        "ecn2.`库位`,\n" +
-        "ecn2.`变更原因`,\n" +
-        "ecn2.`总数量`,\n" +
-        "ecn2.`MO下达车间`,\n" +
-        "ecn2.`变更影响`,\n" +
-        "ecn2.`物料描述`,\n" +
-        "ecn2.ECN,\n" +
-        "ecn2.SO,\n" +
-        "ecn2.`申请人`,\n" +
-        "ecn2.`申请日期`,\n" +
-        "ecn2.`批准人`,\n" +
-        "ecn2.`批准日期`,\n" +
-        "ecn2.`项目名称`,\n" +
-        "ecn2.`已处理`,\n" +
-        "ecn2.`处理人员`,\n" +
-        "ecn2.`完成时间`\n" +
+        "ecn1.id,\n" +
+        "ecn1.`增加或减少`,\n" +
+        "ecn1.`柜号`,\n" +
+        "ecn1.`柜子描述`,\n" +
+        "ecn1.MO,\n" +
+        "ecn1.`物料号`,\n" +
+        "ecn1.`数量`,\n" +
+        "ecn1.`物料属性`,\n" +
+        "ecn1.`库位`,\n" +
+        "ecn1.`变更原因`,\n" +
+        "ecn1.`总数量`,\n" +
+        "ecn1.`MO下达车间`,\n" +
+        "ecn1.`变更影响`,\n" +
+        "ecn1.`物料描述`,\n" +
+        "ecn1.ECN,\n" +
+        "ecn1.SO,\n" +
+        "ecn1.`申请人`,\n" +
+        "ecn1.`申请日期`,\n" +
+        "ecn1.`批准人`,\n" +
+        "ecn1.`批准日期`,\n" +
+        "ecn1.`项目名称`,\n" +
+        "ecn1.`已处理`,\n" +
+        "ecn1.`处理人员`,\n" +
+        "ecn1.`完成时间`\n" +
         "FROM\n" +
-        "ecn2\n" + where).Tables[0];
+        "ecn1\n" + where).Tables[0];
         //"where ISNULL(已处理) or `已处理`=''").Tables[0];
 
         GridView1.DataBind();
@@ -577,32 +577,32 @@ namespace BomChange
     private void Loaddata1()
     {
         GridView1.DataSource = DBHelper.GetDatasByAdapter("SELECT\n" +
-        "ecn2.id,\n" +
-        "ecn2.`增加或减少`,\n" +
-        "ecn2.`柜号`,\n" +
-        "ecn2.`柜子描述`,\n" +
-        "ecn2.MO,\n" +
-        "ecn2.`物料号`,\n" +
-        "ecn2.`数量`,\n" +
-        "ecn2.`物料属性`,\n" +
-        "ecn2.`库位`,\n" +
-        "ecn2.`变更原因`,\n" +
-        "ecn2.`总数量`,\n" +
-        "ecn2.`MO下达车间`,\n" +
-        "ecn2.`变更影响`,\n" +
-        "ecn2.`物料描述`,\n" +
-        "ecn2.ECN,\n" +
-        "ecn2.SO,\n" +
-        "ecn2.`申请人`,\n" +
-        "ecn2.`申请日期`,\n" +
-        "ecn2.`批准人`,\n" +
-        "ecn2.`批准日期`,\n" +
-        "ecn2.`项目名称`,\n" +
-        "ecn2.`已处理`,\n" +
-        "ecn2.`处理人员`,\n" +
-        "ecn2.`完成时间`\n" +
+        "ecn1.id,\n" +
+        "ecn1.`增加或减少`,\n" +
+        "ecn1.`柜号`,\n" +
+        "ecn1.`柜子描述`,\n" +
+        "ecn1.MO,\n" +
+        "ecn1.`物料号`,\n" +
+        "ecn1.`数量`,\n" +
+        "ecn1.`物料属性`,\n" +
+        "ecn1.`库位`,\n" +
+        "ecn1.`变更原因`,\n" +
+        "ecn1.`总数量`,\n" +
+        "ecn1.`MO下达车间`,\n" +
+        "ecn1.`变更影响`,\n" +
+        "ecn1.`物料描述`,\n" +
+        "ecn1.ECN,\n" +
+        "ecn1.SO,\n" +
+        "ecn1.`申请人`,\n" +
+        "ecn1.`申请日期`,\n" +
+        "ecn1.`批准人`,\n" +
+        "ecn1.`批准日期`,\n" +
+        "ecn1.`项目名称`,\n" +
+        "ecn1.`已处理`,\n" +
+        "ecn1.`处理人员`,\n" +
+        "ecn1.`完成时间`\n" +
         "FROM\n" +
-        "ecn2\n" +
+        "ecn1\n" +
         "where ISNULL(已处理) or `已处理`=''").Tables[0];
 
         GridView1.DataBind();

@@ -45,9 +45,9 @@
                 <asp:CommandField HeaderText="操作" ShowEditButton="True" />
             </Columns>
             <EditRowStyle BackColor="#7C6F57" />
-            <FooterStyle BackColor="#27A844" Font-Bold="True" ForeColor="White" />
-            <HeaderStyle BackColor="#27A844" Font-Bold="True" ForeColor="White" />
-            <PagerStyle BackColor="#27A844" ForeColor="White" HorizontalAlign="Center" />
+            <FooterStyle BackColor="#38C859" Font-Bold="True" ForeColor="White" />
+            <HeaderStyle BackColor="#38C859" Font-Bold="True" ForeColor="White" />
+            <PagerStyle BackColor="#38C859" ForeColor="White" HorizontalAlign="Center" />
             <%-- </PagerSettings> --%>
             <RowStyle BackColor="#ccff99" />
             <SelectedRowStyle BackColor="#C5BBAF" Font-Bold="True" ForeColor="#333333" />

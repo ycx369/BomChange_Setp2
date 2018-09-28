@@ -34,7 +34,7 @@
         <!-- Fixed navbar -->
         <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-success">
             <i class="icon-switch"></i>
-            <a class="navbar-brand fs" href="#"><i class="fa fa-leaf"></i>Schneider | life Is On | Material Change System</a>
+            <a class="navbar-brand fs" href="#"><i class="fa fa-leaf"></i>Schneider | life Is On | Warehouse MO Management System</a>
             <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -61,10 +61,10 @@
         <div id="BodyContent1" style="width: 100%; margin-left: 0px">
             <asp:ContentPlaceHolder ID="BodyContent" runat="server">
             </asp:ContentPlaceHolder>
-            <div class="row  text-center" style="background-color: #27A844; height: 60px; text-align: center; margin: 0 auto">
-                <div class="row  text-center" style="background-color: #27A844;;margin:0 auto;line-height:60px" >
+            <div class="row  text-center" style="background-color: #38C859; height: 60px; text-align: center; margin: 0 auto">
+                <div class="row  text-center" style="background-color: #38C859;;margin:0 auto;line-height:60px" >
                     <footer style="text-align: center; color: white; margin-left: 0px">
-                        @ CopyRight XI'AN SEEE  2018 version Beta 1.00
+                        @ CopyRight XI'AN SEEE  2018 version Beta 2.00
                     </footer>
                 </div>
             </div>

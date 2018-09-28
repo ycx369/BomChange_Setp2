@@ -13,6 +13,7 @@ namespace BomChange
         {
             if (!Page.IsPostBack)
             {
+                
                 GridView1.DataSource = DBHelper.GetDatasByAdapter("select * from alllist_addlist").Tables[0];
                 GridView1.DataBind();
             }
