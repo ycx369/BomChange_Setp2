@@ -1,0 +1,110 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Standard.master.cs" Inherits="BomChange.Standard" %>
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+    <title>Bootstrap 101 Template</title>
+    <style type="text/css">
+        .body {
+            background-color: white
+        }
+
+        .GridView th {
+            text-align: center;
+            font-weight: lighter;
+        }
+
+        .GridView td {
+            padding: 4px;
+        }
+    </style>
+    <!-- Bootstrap -->
+    <link href="bootstrap-3.3.7-dist/css/bootstrap.css" rel="stylesheet" />
+    <link href="css/custom.css" rel="stylesheet" />
+    <!-- HTML5 shim 和 Respond.js 是为了让 IE8 支持 HTML5 元素和媒体查询（media queries）功能 -->
+    <!-- 警告：通过 file:// 协议（就是直接将 html 页面拖拽到浏览器中）访问页面时 Respond.js 不起作用 -->
+    <!--[if lt IE 9]>
+      <script src="https://cdn.bootcss.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+        
+    <![endif]-->
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body class="body">
+    <form id="form1" runat="server">
+        <div class="row logobar" >
+            <div class="col-md-2 text-right" style="vertical-align: middle; margin-top: 8px; margin-bottom: 8px;">
+                <img class="logo" alt="logo" src="Images/LIO Green.png" style="height: 40px; width: 180px;">
+            </div>
+            <div class="col-md-2">
+                <div class="row" style="margin-bottom: 3px; margin-top: 6px">
+                    <h4 class="display-5 title hmargin" style="height: 18px; width: 350px; font-family: 'Microsoft YaHei'">Warehouse MO Management System</h4>
+                    <h4 class="display-5 title hmargin" style="height: 18px; width: 300px; font-family: 'Microsoft YaHei'">
+                        <small class="display-5  title">库房变更物料管理系统</small>
+                    </h4>
+                </div>
+            </div>
+            <div class="col-md-1 col-md-offset-3" style="text-align: left; width: 70px;">
+                <h5 class="display-5  title text-right" style="width: 65px; height: 12px; text-align: left"><%=Session["userName"]%></h5>
+                <h5 class="display-5 title text-right" style="width: 65px; height: 12px; text-align: left">欢迎你！</h5>
+            </div>
+            <div class="col-md-1" style="width: 75px; height: 50px; text-align: left; margin-top: 3px">
+                <img class="img-responsive center-block" src="Images/head.png" style="width: 70px; height: 45px; text-align: left">
+            </div>
+        </div>
+
+        <ul class="nav nav-tabs " style="background-color: #38C859">
+            <li role="presentation" class="col-md-offset-2"><a href="Standard_1.aspx">Home</a></li>
+            <li role="presentation" ><a href="Standard_1.aspx">刷新</a></li>
+            <li role="presentation"><a href="#">预留2</a></li>
+            <li role="presentation" class="dropdown">
+                <a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">统计 <span class="caret"></span>
+                </a>
+                <ul class="dropdown-menu">
+                    <li><a href="#">项目ECN统计</a></li>
+                    <li><a href="PersonStatistics.aspx">人员ECN统计</a></li>
+                    <li><a href="#">时间段ECN统计</a></li>
+                </ul>
+            </li>
+            <li role="presentation" class="dropdown">
+                <a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">查看 <span class="caret"></span>
+                </a>
+                <ul class="dropdown-menu">
+                    <li><a href="Handdone1.aspx">已处理清单</a></li>
+                    <li><a href="ECNList1.aspx">已导入ECN</a></li>
+                    <li><a href="AddHand1.aspx">所有Add清单(近三个月)</a></li>
+                    <li><a href="DeleHand1.aspx">所有Dele清单(近三个月)</a></li>
+                    <li><a href="AllList1.aspx">所有物料清单(近三个月)</a></li>
+                </ul>
+            </li>
+        </ul>
+
+        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+        </asp:ContentPlaceHolder>
+        <div class="row  text-center" style="background-color: #38C859; margin: 0 auto; line-height: 30px">
+            <footer style="text-align: center; color: white; margin-left: 0px; margin-top: 10px; margin-bottom: 10px">
+                为了获得最佳操作体验，建议您使用最新版本的浏览器，支持1024 X 768以上分辨率
+                <br />
+                @ CopyRight XI'AN SEEE  2018 Version Beta 2.00
+            </footer>
+        </div>
+
+
+        <%--		<ul class="nav navbar-nav navbar-right">
+					<li><a href="https://github.com/stonejinyan/TPM/commits/master">版本更新记录</a></li>
+				</ul>--%>
+
+        <!-- jQuery (Bootstrap 的所有 JavaScript 插件都依赖 jQuery，所以必须放在前边) -->
+        <script src="https://cdn.bootcss.com/jquery/1.12.4/jquery.min.js"></script>
+        <!-- 加载 Bootstrap 的所有 JavaScript 插件。你也可以根据需要只加载单个插件。 -->
+        <script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+
+    </form>
+</body>
+</html>
