@@ -152,8 +152,7 @@ namespace BomChange
                 {
                     string huohao = this.GridView1.Rows[i].Cells[1].Text.ToString();
                     string num = DBHelper.ExcuteSqlreturnInt("update ecn1 SET `已处理`='',`处理人员`='',`完成时间`=Null  where id='" + huohao + "'").ToString();
-                    //Response.Write("<script>alert('" + huohao + "');</script>");
-                    //Response.Write("<script>alert('" + huohao + "');</script>");
+    
                 }
 
             }
